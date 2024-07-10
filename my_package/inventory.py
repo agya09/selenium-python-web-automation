@@ -3,6 +3,7 @@ from my_package.elements import BasePageElement
 from .locators import HomeLocators
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.by import By
+from selenium.webdriver.common.action_chains import ActionChains
 
 about_page_url = 'https://saucelabs.com/'
 
@@ -13,8 +14,8 @@ class BasePage(object):
 
 class HomePage(BasePage):
 
-    def wait(self):
-        time.sleep(3)
+    def wait(self,s):
+        time.sleep(s)
 
     def is_home_page(self):
         return self.driver.find_element(*HomeLocators.LOGO)
@@ -28,6 +29,8 @@ class HomePage(BasePage):
 
     def click_all_items(self):
         ele = self.driver.find_element(*HomeLocators.ALL_ITEMS)
+        self.driver.implicitly_wait(10)
+        # ActionChains(self.driver).move_to_element(ele).click(ele).perform()
         ele.click()
 
     def click_about(self):

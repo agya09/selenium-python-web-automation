@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="846aab16-c8c6-4dd5-9e73-6048b090f928" name="Changes" comment="" />
+    <list default="true" id="846aab16-c8c6-4dd5-9e73-6048b090f928" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_package/locators.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_package/locators.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_homepage.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_homepage.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,6 +21,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
@@ -27,8 +34,10 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Python tests.Python tests in test_homepage.py.executor": "Debug",
+    "Python tests.Python tests for test_homepage.HomePage.test_page_load.executor": "Run",
+    "Python tests.Python tests in test_homepage.py.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
     "last_opened_file_path": "/home/agya/Documents/WebAutomationwithSelenium",
     "settings.editor.selected.configurable": "preferences.pluginManager"
   },
@@ -38,5 +47,30 @@
     ]
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="Python tests for test_homepage.HomePage.test_page_load" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="WebAutomationwithSelenium" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_homepage.HomePage.test_page_load&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python tests.Python tests for test_homepage.HomePage.test_page_load" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName=".gitignore" />
+  </component>
 </project>
