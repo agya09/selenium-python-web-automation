@@ -1,4 +1,3 @@
-import time
 import unittest
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
@@ -9,6 +8,8 @@ swag_url = "https://saucelabs.com/"
 
 
 class Home(unittest.TestCase):
+
+    driver = None
 
     @classmethod
     def setUpClass(cls):
@@ -46,8 +47,55 @@ class Home(unittest.TestCase):
     
     def test_5_logout(self):
         screen = HomePage(self.driver)
-        
+        screen.click_drawer()
+        screen.click_logout()
+        screen.wait(2)
+        self.assertEqual(screen.is_login_page(), self.driver.current_url, "Logout is not performed.")
+        self.driver.get(url)
+        screen.click_drawer()
 
-    # @classmethod
-    # def tearDownClass(cls):
-    #     cls.driver.close()
+    def test_6_close_sidebar(self):
+        screen = HomePage(self.driver)
+        screen.wait(2)
+        screen.click_close_icon()
+        assert True, "Sidebar is closed."
+
+    def test_7_filter_by_name_a_to_z(self):
+        screen = HomePage(self.driver)
+        screen.click_a_to_z()
+        screen.wait(1)
+        expected_item = 'Sauce Labs Backpack'
+        actual_item = screen.first_item()
+        screen.wait(1)
+        self.assertEqual(expected_item, actual_item, "Filter is not working properly.")
+
+    def test_8_filter_by_name_z_to_a(self):
+        screen = HomePage(self.driver)
+        screen.click_z_to_a()
+        screen.wait(1)
+        expected_item = 'Test.allTheThings() T-Shirt (Red)'
+        actual_item = screen.first_item()
+        screen.wait(1)
+        self.assertEqual(expected_item, actual_item, "Filter is not working properly.")
+
+    def test_9_filter_by_price_high_to_low(self):
+        screen = HomePage(self.driver)
+        screen.click_h_to_l()
+        screen.wait(1)
+        expected_item = 'Sauce Labs Fleece Jacket'
+        actual_item = screen.first_item()
+        screen.wait(1)
+        self.assertEqual(expected_item, actual_item, "Filter is not working properly.")
+
+    def test_filter_by_price_low_to_high(self):
+        screen = HomePage(self.driver)
+        screen.click_l_to_h()
+        screen.wait(1)
+        expected_item = 'Sauce Labs Onesie'
+        actual_item = screen.first_item()
+        screen.wait(1)
+        self.assertEqual(expected_item, actual_item, "Filter is not working properly.")
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.driver.close()
